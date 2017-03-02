@@ -85,3 +85,6 @@ RUN \
 #  tr -d '\015' < /tmp/spark-worker.sh > /tmp/spark-worker-unix.sh && \
 #  mv /tmp/spark-worker-unix.sh /etc/my_init.d/spark-worker.sh && \
 #  chmod +x /etc/my_init.d/spark-worker.sh
+
+# Clean up APT when done.
+RUN apt-get clean && rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*
