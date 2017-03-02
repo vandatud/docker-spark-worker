@@ -1,2 +1,2 @@
 #!/bin/sh
-exec $SPARK_HOME/sbin/start-slave.sh spark://spark-master:7077 >>$SPARK_HOME/logs/spark-service.log 2>&1
+exec $SPARK_HOME/sbin/start-slave.sh spark://$SPARK_MASTER_HOST:$SPARK_MASTER_PORT >>$SPARK_HOME/logs/spark-service.log 2>&1
